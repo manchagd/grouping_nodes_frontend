@@ -4,15 +4,11 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div className="min-h-screen flex items-center justify-center bg-blue-500 text-white text-2xl">
-        ¡Tailwind CSS está funcionando! 🎉
-      </div>
-    </>
-  )
+    <div className="bg-blue-500 text-white p-4 rounded-lg">
+      Tailwind is working!
+    </div>
+  );
 }
 
 export default App
