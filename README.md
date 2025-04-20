@@ -1,1 +1,1 @@
-Algo por ejemplo
+por ejemplo
