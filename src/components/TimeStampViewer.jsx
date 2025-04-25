@@ -1,30 +1,30 @@
 import { useEffect, useState } from 'react';
 import api from '../api/axios';
 
-function DatetimeViewer() {
-  const [datetime, setDatetime] = useState(null);
+function TimeStampViewer() {
+  const [timestamp, setTimestamp] = useState(null);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchDatetime = async () => {
+    const fetchTimeStamp = async () => {
       try {
-        const response = await api.get('/current_datetime');
-        setDatetime(response.data.datetime);
+        const response = await api.get('/time_stamp');
+        setTimestamp(response.data.current_time);
       } catch (err) {
         console.error('Unable to obtain date and time:', err);
         setError('Couldnt found date and time');
       }
     };
 
-    fetchDatetime();
+    fetchTimeStamp();
   }, []);
 
   return (
     <div className="p-4">
       <h1 className="text-2xl font-bold mb-2 text-gray-800">Date and Time from Rails:</h1>
       {error && <p className="text-red-500 font-bold">{error}</p>}
-      {datetime ? (
-        <p className="text-gray-500 font-bold">{datetime}</p>
+      {timestamp ? (
+        <p className="text-gray-500 font-bold">{timestamp}</p>
       ) : (
         !error && <p className="text-gray-400">Charging...</p>
       )}
@@ -32,4 +32,4 @@ function DatetimeViewer() {
   );
 }
 
-export default DatetimeViewer;
+export default TimeStampViewer;

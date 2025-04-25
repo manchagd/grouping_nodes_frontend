@@ -8,7 +8,7 @@ export default function MainLayout() {
           <nav className="px-4 py-4 flex gap-4 max-w-4xl mx-auto">
             <Link to="/">Home</Link>
             <Link to="/about">About</Link>
-            <Link to="/current_datetime">Date & Time</Link>
+            <Link to="/time_stamp">Date & Time</Link>
           </nav>
         </header>
 
