@@ -11,7 +11,6 @@ function TimeStampViewer() {
         const response = await api.get('/time_stamp');
         setTimestamp(response.data.current_time);
       } catch (err) {
-        console.error('Unable to obtain date and time:', err);
         setError('Couldnt found date and time');
       }
     };
