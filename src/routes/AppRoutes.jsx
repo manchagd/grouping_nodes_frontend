@@ -2,7 +2,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import MainLayout from '../layouts/MainLayout';
 import Home from '../pages/Home';
 import About from '../pages/About';
-import TimeStampViewer from '../components/TimeStampViewer';
+import DatetimeViewer from '../components/DatetimeViewer';
 
 const router = createBrowserRouter([
   {
@@ -18,8 +18,8 @@ const router = createBrowserRouter([
         element: <About />,
       },
       {
-        path: 'time_stamp',
-        element: <TimeStampViewer />,
+        path: 'datetime',
+        element: <DatetimeViewer />,
       },
     ],
   },
