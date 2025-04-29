@@ -1,4 +1,4 @@
-FROM --platform=linux/amd64 node:20.14.0-alpine
+FROM node:20.14.0-alpine
 
 RUN apk add --no-cache bash curl python3 make g++ git
 
@@ -10,7 +10,7 @@ WORKDIR /app
 
 COPY package.json yarn.lock ./
 
-RUN yarn install --ignore-platform
+RUN yarn install
 
 COPY . .
 
