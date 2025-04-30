@@ -9,7 +9,7 @@ function DatetimeViewer() {
     const fetchDatetime = async () => {
       try {
         const response = await api.get('/datetime');
-        setDatetime(response.data.current_time);
+        setDatetime(response.data.datetime);
       } catch (err) {
         setError('Couldnt found date and time');
       }
